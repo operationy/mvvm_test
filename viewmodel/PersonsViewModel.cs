@@ -13,7 +13,7 @@ namespace mvvm_test.viewmodel
     internal class PersonsViewModel : DependencyObject
     {
 
-
+        //propdp
         public string FilterText
         {
             get { return (string)GetValue(FilterTextProperty); }
