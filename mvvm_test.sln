@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvvm_test", "mvvm_test.csproj", "{C95446EB-28C1-4AEA-BD2E-DD110FA94CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Department_mvvm_app", "..\Department_mvvm_app\Department_mvvm_app.csproj", "{B2D9DA68-A26D-475D-82E0-9067EBAA97FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C95446EB-28C1-4AEA-BD2E-DD110FA94CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C95446EB-28C1-4AEA-BD2E-DD110FA94CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C95446EB-28C1-4AEA-BD2E-DD110FA94CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D9DA68-A26D-475D-82E0-9067EBAA97FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D9DA68-A26D-475D-82E0-9067EBAA97FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D9DA68-A26D-475D-82E0-9067EBAA97FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D9DA68-A26D-475D-82E0-9067EBAA97FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
