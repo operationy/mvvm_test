@@ -22,9 +22,17 @@ namespace mvvm_test.viewmodel
 
         // Using a DependencyProperty as the backing store for FilterText.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty FilterTextProperty =
-            DependencyProperty.Register("FilterText", typeof(string), typeof(PersonsViewModel), new PropertyMetadata(""));
+            DependencyProperty.Register("FilterText", typeof(string), typeof(PersonsViewModel), new PropertyMetadata("", FilterText_Chenged));
 
-
+        private static void FilterText_Chenged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var current = d as PersonsViewModel;
+            if(current != null)
+            {
+                current.Items.Filter = null;
+                current.Items.Filter = current.FilterPerson;
+            }
+        }
 
         public ICollectionView Items
         {
@@ -39,6 +47,18 @@ namespace mvvm_test.viewmodel
         public PersonsViewModel()
         {
             Items = CollectionViewSource.GetDefaultView(Person.GetPerson());
+            Items.Filter = FilterPerson;
+        }
+
+        private bool FilterPerson(object obj)
+        {
+            bool result = true;
+            Person current = obj as Person;
+            if(!string.IsNullOrWhiteSpace(FilterText) && current != null && !current.FirstName.Contains(FilterText) && !current.LastName.Contains(FilterText))
+            {
+                result = false;
+            }
+            return result;
         }
     }
 }

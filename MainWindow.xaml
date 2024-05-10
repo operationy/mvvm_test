@@ -15,9 +15,9 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Фильтр" Margin="5"/>
-            <TextBox Text="{Binding FilterText}" Width="200" Margin="5"/>
+            <TextBox Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5"/>
         </StackPanel>
-        <DataGrid Grid.Row="1" Margin="5" ItemsSource="{Binding Items}">
+        <DataGrid Grid.Row="1" Margin="5" ItemsSource="{Binding Items}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
                 <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
